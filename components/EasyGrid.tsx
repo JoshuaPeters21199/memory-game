@@ -33,7 +33,7 @@ const EasyGrid: React.FC = () => {
 
   const emojiLocation: EmojiLocationObj = {}
 
-  
+
 
   return (
     <div className='grid grid-cols-4 gap-4 h-full'>
