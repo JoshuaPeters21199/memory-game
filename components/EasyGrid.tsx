@@ -3,8 +3,6 @@ import Card from './Card';
 
 const EasyGrid: React.FC = () => {
 
-  const cards = Array.from({ length: 16 }, (_, index) => <Card key={index} emoji='test' />);
-
   const animals: { [key: string]: string } = {
     'tiger': '🐅',
     'camel': '🐫',
@@ -25,6 +23,8 @@ const EasyGrid: React.FC = () => {
     'turlte': 0
   }
 
+  const cards = Array.from({ length: 16 }, (_, index) => <Card key={index} emoji={animals.tiger} />);
+
   type IntTuple = [number, number];
 
   type EmojiLocationObj = { [key: string]: IntTuple };
@@ -32,7 +32,6 @@ const EasyGrid: React.FC = () => {
   let locationArr: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   const emojiLocation: EmojiLocationObj = {}
-
 
 
   return (
